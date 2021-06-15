@@ -2,7 +2,9 @@ clear
 #安装Docker
 echo -e "========================"
 echo -e "正在安装 Docker "
-curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+#阿里云镜像似乎无了
+#curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+curl -fsSL https://get.docker.com | bash -s docker
 bash get-docker.sh
 sleep 1s
 echo -e "Docker 安装完成"
