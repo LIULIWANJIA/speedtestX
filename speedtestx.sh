@@ -18,15 +18,15 @@ echo -e "========================"
 clear
 
 #拉取镜像
-echo -e "拉取 Docker 镜像 badapple9/speedtest-x"
-docker pull badapple9/speedtest-x
+echo -e "拉取 Docker 镜像 liuliwanjia/v2docker:speedtestx"
+docker pull liuliwanjia/v2docker:speedtestx
 echo -e "完成"
 
 clear
 
 #以5210端口运行
 echo -e "启用 Docker 以5210端口运行speedtestx"
-docker run -d -p 5210:80 -it badapple9/speedtest-x
+docker run -d -p 5210:80 -it liuliwanjia/v2docker:speedtestx
 
 ip=$(wget -qO- -t1 -T2 ipinfo.io/ip)
 if [[ -z "${ip}" ]]; then
